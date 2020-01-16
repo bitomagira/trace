@@ -19,5 +19,10 @@ public class usersService {
 		Myrepo.save(user);
 		return user;
 	}
+	
+	public usersModel getUserByLogin(String login,String pwd) {
+		return Myrepo.getUserByLogin(login,pwd);
+		
+	}
 
 }

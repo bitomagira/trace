@@ -29,11 +29,11 @@ public class tiketService {
 		return myTiketRepo.findById(id).get();
 	}
 
-	public tiketModel putOne( String trace) {
-		System.out.println(trace+ "  serv");
-		System.out.println(myTiketRepo.putOne(trace));
+	public int putOne( String trace,int id) {
+		System.out.println("  serv");
+		System.out.println(myTiketRepo.putOne(trace,id));
 		
-		return myTiketRepo.putOne(trace);
+		return myTiketRepo.putOne(trace,id);
 	}
 	
 	
