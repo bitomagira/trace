@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  traceDB:
+    image: mysql:8.0
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_DATABASE=traceDB
+      - MYSQL_USER=root
+    ports:
+      - 3306:3306
+
+  traceApp:
+    image: trace
+    restart: on-failure
+    depends_on:
+      - traceDB
+    ports:
+      - 9090:8080
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://traceDB:3306/traceDB?autoReconnect=true&useSSL=false
+      - DATABASE_USER=root
+

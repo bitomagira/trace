@@ -50,14 +50,7 @@ public class celluleTest{
 	}
 	
 	
-//	@Test
-//	public void getONeCelluleTest() {
-//		celluleModel cellule=new	 celluleModel(376, "Danile", "steve","role", "USA");
-//		
-//		when(myrepo.findById(376)).thenReturn(cellule);
-//		
-//		assertEquals(cellule,myservice.getONeCellule(376));
-//	}
+
 	
 
 }

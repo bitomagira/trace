@@ -72,9 +72,4 @@ public class recuModel {
 		this.responsable = responsable;
 		this.lieu = lieu;
 	}
-	
-	
-	
-	
-
 }
