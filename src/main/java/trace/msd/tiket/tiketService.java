@@ -3,9 +3,11 @@ package trace.msd.tiket;
 import java.util.List;
 import java.util.Optional;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+@Slf4j
 @Service
 public class tiketService {
 	@Autowired
@@ -30,8 +32,7 @@ public class tiketService {
 	}
 
 	public int putOne( String trace,int id) {
-		System.out.println("  serv");
-		System.out.println(myTiketRepo.putOne(trace,id));
+		log.warn("my ticket " + myTiketRepo.putOne(trace,id));
 		
 		return myTiketRepo.putOne(trace,id);
 	}

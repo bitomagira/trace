@@ -20,4 +20,7 @@ services:
     environment:
       - SPRING_DATASOURCE_URL=jdbc:mysql://traceDB:3306/traceDB?autoReconnect=true&useSSL=false
       - DATABASE_USER=root
-
+#  sqs:
+#    image: roribio16/alpine-sqs
+#    ports:
+#      - "9324:9324"

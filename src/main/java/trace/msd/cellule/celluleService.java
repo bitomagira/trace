@@ -3,9 +3,11 @@ package trace.msd.cellule;
 import java.util.ArrayList;
 import java.util.List;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+@Slf4j
 @Service
 public class celluleService {
 	@Autowired
@@ -20,7 +22,7 @@ public class celluleService {
 	}
 	
 	public celluleModel createcellule(celluleModel data) {
-		System.out.println(data);
+		log.warn("data " + data);
 		myRepo.save(data);
 		return data;
 	}

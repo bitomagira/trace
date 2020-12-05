@@ -8,7 +8,7 @@ import javax.persistence.ManyToOne;
 
 import trace.msd.cellule.celluleModel;
 
-@Entity
+@Entity(name = "recu")
 public class recuModel {
 	@Id
 	private int id;

@@ -9,7 +9,7 @@ import javax.persistence.OneToMany;
 
 import trace.msd.recu.recuModel;
 
-@Entity
+@Entity(name = "cellule")
 public class celluleModel {
 	@Id
 	private int id;
